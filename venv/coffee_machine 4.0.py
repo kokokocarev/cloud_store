@@ -1,25 +1,58 @@
-water_need = 200
-milk_need = 50
-beans_need = 15
-one_cup = water_need + milk_need + beans_need
-water_has = int(input())
-milk_has = int(input())
-cof_beans = int(input())
-cups = int(input())
-print("Write how many ml of water the coffee machine has:", water_has)
-print("Write how many ml of milk the coffee machine has:", milk_has)
-print("Write how many grams of coffee beans the coffee machine has:", cof_beans)
-print("Write how many cups of coffee you will need:", cups)
-if (water_has >= cups * water_need) and (milk_has >= cups * milk_need) and (cof_beans >= cups * beans_need):
-    if (cups >= 0 and water_has > 0 and milk_has > 0 and cof_beans > 0):
-        can_yes = min(water_has // water_need, milk_has // milk_need, cof_beans // beans_need)
-        else_yes = can_yes - cups
-        print("Yes, I can make that amount of coffee (and even", else_yes,"more than that)")
-    else:
-        print("Yes, I can make that amount of coffee")
-elif (water_has <= cups * water_need) or (milk_has <= cups * milk_need) or (cof_beans <= cups * beans_need):
-     if (water_has > 0) or (milk_has > 0) or (cof_beans > 0):
-        can_no = min(water_has // water_need, milk_has // milk_need, cof_beans // beans_need)
-        print("No, I can make only", can_no,"cups of coffee")
-     else:
-        print("No, I can make only 0 cups of coffee")
+water = 1200
+milk = 540
+cof_beans = 120
+dis_cups = 9
+money = 550
+print("The coffee machine has:")
+print(water ,"of water")
+print(milk,"of milk")
+print(cof_beans,"of coffee beans")
+print(dis_cups,"of disposable cups")
+print(money,"of money")
+
+def take():
+    global action
+    action = input()
+    money_out = money - money
+    print("Write action (buy, fill, take):",action)
+    print("I gave you $",money)
+    print()
+    print("The coffee machine has:")
+    print(water, "of water")
+    print(milk, "of milk")
+    print(cof_beans, "of coffee beans")
+    print(dis_cups, "of disposable cups")
+    print(money_out, "of money")
+
+def fill():
+    global action
+    action = input()
+    print("Write action (buy, fill, take):", action)
+    water_add = int(input())
+    milk_add = int(input())
+    cof_beans_add = int(input())
+    dis_cups_add = int(input())
+    print("Write how many ml of water do you want to add:", water_add)
+    print("Write how many ml of milk do you want to add:", milk_add)
+    print("Write how many grams of coffee beans do you want to add:", cof_beans_add)
+    print("Write how many disposable cups of coffee do you want to add", dis_cups_add)
+    print("The coffee machine has:")
+    print(water + water_add, "of water")
+    print(milk + milk_add, "of milk")
+    print(cof_beans + cof_beans_add, "of coffee beans")
+    print(dis_cups + dis_cups_add, "of disposable cups")
+    print(money, "of money")
+
+if action == "fill":
+    fill()
+if action == "take":
+    take()
+
+#def buy():
+   # espresso =
+   # latte =
+   # cappuccino =
+   # print("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino:", (int(input())))
+
+
+
