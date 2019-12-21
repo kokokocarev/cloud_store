@@ -17,9 +17,3 @@ if (water_has >= cups * water_need) and (milk_has >= cups * milk_need) and (cof_
         print("Yes, I can make that amount of coffee (and even", else_yes,"more than that)")
     else:
         print("Yes, I can make that amount of coffee")
-elif (water_has <= cups * water_need) or (milk_has <= cups * milk_need) or (cof_beans <= cups * beans_need):
-     if (water_has > 0) or (milk_has > 0) or (cof_beans > 0):
-        can_no = min(water_has // water_need, milk_has // milk_need, cof_beans // beans_need)
-        print("No, I can make only", can_no,"cups of coffee")
-     else:
-        print("No, I can make only 0 cups of coffee")
