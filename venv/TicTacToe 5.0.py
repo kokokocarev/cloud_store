@@ -6,11 +6,7 @@ field = [[field[0][0], field[0][1], field[0][2]],
          [field[2][0], field[2][1], field[2][2]]]
 numbers_s = [str(i) for i in range(0, 10)]
 numbers_c = [int(i) for i in range(0, 10)]
-col_1 = [col[0] for col in field]
-col_2 = [col[1] for col in field]
-col_3 = [col[2] for col in field]
-count_x = field.count('X')
-count_o = field.count('O')
+counter = 0
 
 
 def input_():
@@ -47,91 +43,143 @@ def non_str():
 
 
 def coord_():
-    global coord
-    if coord == [1, 1]:
-        if field[2][0] == ' ':
-            field[2][0] = 'X'
-            print_()
-            input_()
-        else:
-            print('This cell is occupied! Choose another one!')
-            coord = input('Enter the coordinates: ').split()
-            non_str()
-    elif coord == [1, 2]:
-        if field[1][0] == ' ':
-            field[1][0] = 'X'
-            print_()
-            input_()
-        else:
-            print('This cell is occupied! Choose another one!')
-            coord = input('Enter the coordinates: ').split()
-            non_str()
-    elif coord == [1, 3]:
-        if field[0][0] == ' ':
-            field[0][0] = 'X'
-            print_()
-            input_()
-        else:
-            print('This cell is occupied! Choose another one!')
-            coord = input('Enter the coordinates: ').split()
-            non_str()
-    elif coord == [2, 1]:
-        if field[2][1] == ' ':
-            field[2][1] = 'X'
-            print_()
-            input_()
-        else:
-            print('This cell is occupied! Choose another one!')
-            coord = input('Enter the coordinates: ').split()
-            non_str()
-    elif coord == [2, 2]:
-        if field[1][1] == ' ':
-            field[1][1] = 'X'
-            print_()
-            input_()
-        else:
-            print('This cell is occupied! Choose another one!')
-            coord = input('Enter the coordinates: ').split()
-            non_str()
-    elif coord == [2, 3]:
-        if field[0][1] == ' ':
-            field[0][1] = 'X'
-            print_()
-            input_()
-        else:
-            print('This cell is occupied! Choose another one!')
-            coord = input('Enter the coordinates: ').split()
-            non_str()
-    elif coord == [3, 1]:
-        if field[2][2] == ' ':
-            field[2][2] = 'X'
-            print_()
-            input_()
-        else:
-            print('This cell is occupied! Choose another one!')
-            coord = input('Enter the coordinates: ').split()
-            non_str()
-    elif coord == [3, 2]:
-        if field[1][2] == ' ':
-            field[1][2] = 'X'
-            print_()
-            input_()
-        else:
-            print('This cell is occupied! Choose another one!')
-            coord = input('Enter the coordinates: ').split()
-            non_str()
-    elif coord == [3, 3]:
-        if field[0][2] == ' ':
-            field[0][2] = 'X'
-            print_()
-            input_()
-        else:
-            print('This cell is occupied! Choose another one!')
-            coord = input('Enter the coordinates: ').split()
-            non_str()
+    global coord, counter
+    for i in coord:
+        if coord == [1, 1]:
+            if field[2][0] == ' ':
+                counter += 1
+                if counter % 2 == 0:
+                    field[2][0] = 'O'
+                else:
+                    field[2][0] = 'X'
+                print_()
+                stage_()
+                input_()
+            else:
+                print('This cell is occupied! Choose another one!')
+                coord = input('Enter the coordinates: ').split()
+                non_str()
+        elif coord == [1, 2]:
+            if field[1][0] == ' ':
+                counter += 1
+                if counter % 2 == 0:
+                    field[1][0] = 'O'
+                else:
+                    field[1][0] = 'X'
+                print_()
+                stage_()
+                input_()
+            else:
+                print('This cell is occupied! Choose another one!')
+                coord = input('Enter the coordinates: ').split()
+                non_str()
+        elif coord == [1, 3]:
+            if field[0][0] == ' ':
+                counter += 1
+                if counter % 2 == 0:
+                    field[0][0] = 'O'
+                else:
+                    field[0][0] = 'X'
+                print_()
+                stage_()
+                input_()
+            else:
+                print('This cell is occupied! Choose another one!')
+                coord = input('Enter the coordinates: ').split()
+                non_str()
+        elif coord == [2, 1]:
+            if field[2][1] == ' ':
+                counter += 1
+                if counter % 2 == 0:
+                    field[2][1] = 'O'
+                else:
+                    field[2][1] = 'X'
+                print_()
+                stage_()
+                input_()
+            else:
+                print('This cell is occupied! Choose another one!')
+                coord = input('Enter the coordinates: ').split()
+                non_str()
+        elif coord == [2, 2]:
+            if field[1][1] == ' ':
+                counter += 1
+                if counter % 2 == 0:
+                    field[1][1] = 'O'
+                else:
+                    field[1][1] = 'X'
+                print_()
+                stage_()
+                input_()
+            else:
+                print('This cell is occupied! Choose another one!')
+                coord = input('Enter the coordinates: ').split()
+                non_str()
+        elif coord == [2, 3]:
+            if field[0][1] == ' ':
+                counter += 1
+                if counter % 2 == 0:
+                    field[0][1] = 'O'
+                else:
+                    field[0][1] = 'X'
+                print_()
+                stage_()
+                input_()
+            else:
+                print('This cell is occupied! Choose another one!')
+                coord = input('Enter the coordinates: ').split()
+                non_str()
+        elif coord == [3, 1]:
+            if field[2][2] == ' ':
+                counter += 1
+                if counter % 2 == 0:
+                    field[2][2] = 'O'
+                else:
+                    field[2][2] = 'X'
+                print_()
+                stage_()
+                input_()
+            else:
+                print('This cell is occupied! Choose another one!')
+                coord = input('Enter the coordinates: ').split()
+                non_str()
+        elif coord == [3, 2]:
+            if field[1][2] == ' ':
+                counter += 1
+                if counter % 2 == 0:
+                    field[1][2] = 'O'
+                else:
+                    field[1][2] = 'X'
+                print_()
+                stage_()
+                input_()
+            else:
+                print('This cell is occupied! Choose another one!')
+                coord = input('Enter the coordinates: ').split()
+                non_str()
+        elif coord == [3, 3]:
+            if field[0][2] == ' ':
+                counter += 1
+                if counter % 2 == 0:
+                    field[0][2] = 'O'
+                else:
+                    field[0][2] = 'X'
+                print_()
+                stage_()
+                input_()
+            else:
+                print('This cell is occupied! Choose another one!')
+                coord = input('Enter the coordinates: ').split()
+                non_str()
 
 
 def stage_():
+    global coord, col_1, col_2, col_3, count_x, count_o
+    col_1 = [col[0] for col in field]
+    col_2 = [col[1] for col in field]
+    col_3 = [col[2] for col in field]
+    count_x = field[0].count('X') + field[1].count('X') + field[2].count('X')
+    count_o = field[0].count('O') + field[1].count('O') + field[2].count('O')
     for i in field:
         if (field[0][0] == '_') \
                 or (count_x - count_o >= 2) \
@@ -148,10 +196,9 @@ def stage_():
                 or ['X', 'X', 'X'] == col_2 and ['O', 'O', 'O'] == col_3 \
                 or ['X', 'X', 'X'] == col_3 and ['O', 'O', 'O'] == col_1 \
                 or ['X', 'X', 'X'] == col_3 and ['O', 'O', 'O'] == col_2:
-            print_()
             print('Impossible')
             break
-        if ['X', 'X', 'X'] == field[0] \
+        elif ['X', 'X', 'X'] == field[0] \
                 or ['X', 'X', 'X'] == field[1] \
                 or ['X', 'X', 'X'] == field[2] \
                 or ['X', 'X', 'X'] == col_1 \
@@ -159,10 +206,9 @@ def stage_():
                 or ['X', 'X', 'X'] == col_3 \
                 or field[0][0] == 'X' and field[1][1] == 'X' and field[2][2] == 'X' \
                 or field[0][2] == 'X' and field[1][1] == 'X' and field[2][0] == 'X':
-            print_()
             print('X wins')
             break
-        if ['O', 'O', 'O'] == field[0] \
+        elif ['O', 'O', 'O'] == field[0] \
                 or ['O', 'O', 'O'] == field[1] \
                 or ['O', 'O', 'O'] == field[2] \
                 or ['O', 'O', 'O'] == col_1 \
@@ -170,19 +216,14 @@ def stage_():
                 or ['O', 'O', 'O'] == col_3 \
                 or field[0][0] == 'O' and field[1][1] == 'O' and field[2][2] == 'O' \
                 or field[0][2] == 'O' and field[1][1] == 'O' and field[2][0] == 'O':
-            print_()
             print('O wins')
             break
-        if field.count('_') == 0:
-            print_()
+        elif field[0].count(' ') == 0 \
+            and field[1].count(' ') == 0 \
+                and field[2].count(' ') == 0:
             print('Draw')
             break
 
 
-def main():
-    print_()
-    for i in field:
-        input_()
-
-
-main()
+print_()
+input_()
