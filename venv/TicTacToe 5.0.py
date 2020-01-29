@@ -219,7 +219,7 @@ def stage_():
             print('O wins')
             break
         elif field[0].count(' ') == 0 \
-            and field[1].count(' ') == 0 \
+                and field[1].count(' ') == 0 \
                 and field[2].count(' ') == 0:
             print('Draw')
             break
