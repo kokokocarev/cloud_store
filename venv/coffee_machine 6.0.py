@@ -10,14 +10,14 @@ class CoffeeMachine:
 
     def choosing_action(self):
         if self.action == "remaining":
-            print()
-            print("The coffee machine has:")
-            print(CoffeeMachine.water, "of water")
-            print(CoffeeMachine.milk, "of milk")
-            print(CoffeeMachine.cof_beans, "of coffee beans")
-            print(CoffeeMachine.dis_cups, "of disposable cups")
-            print(CoffeeMachine.money, "of money")
-            print()
+            print(f"""
+The coffee machine has:
+{CoffeeMachine.water} of water
+{CoffeeMachine.milk} of milk
+{CoffeeMachine.cof_beans} of coffee beans
+{CoffeeMachine.dis_cups} of disposable cups
+{CoffeeMachine.money} of money
+""")
         if self.action == "fill":
             global water_add, milk_add, cof_beans_add, dis_cups_add
             print()
@@ -40,7 +40,6 @@ class CoffeeMachine:
         self.milk_buy = 0
         self.cof_beans_buy = 0
         self.dis_cups_buy = 0
-        print()
         choice = input("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino, back - to main menu: ")
         if choice == '1':
             self.water_buy = 250
@@ -63,14 +62,14 @@ class CoffeeMachine:
             self.money_buy = 6
             self.control_res()
         if choice == 'back':
-            print()
-            print("The coffee machine has:")
-            print(CoffeeMachine.water, "of water")
-            print(CoffeeMachine.milk, "of milk")
-            print(CoffeeMachine.cof_beans, "of coffee beans")
-            print(CoffeeMachine.dis_cups, "of disposable cups")
-            print(CoffeeMachine.money, "of money")
-            print()
+            print(f"""
+The coffee machine has:
+{CoffeeMachine.water} of water
+{CoffeeMachine.milk} of milk
+{CoffeeMachine.cof_beans} of coffee beans
+{CoffeeMachine.dis_cups} of disposable cups
+{CoffeeMachine.money} of money
+""")
 
     def control_res(self):
         if CoffeeMachine.water >= self.water_buy and CoffeeMachine.milk >= self.milk_buy and CoffeeMachine.cof_beans >= self.cof_beans_buy and CoffeeMachine.dis_cups >= self.dis_cups_buy:
