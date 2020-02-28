@@ -26,6 +26,13 @@ def print_():
 ---------''')
 
 
+def occup():
+    global coord
+    print('This cell is occupied! Choose another one!')
+    coord = input('Enter the coordinates: ').split()
+    non_str()
+
+
 def non_str():
     global coord
     if coord[0] not in numbers_s or coord[1] not in numbers_s:
@@ -55,9 +62,7 @@ def coord_():
             stage_()
             input_()
         else:
-            print('This cell is occupied! Choose another one!')
-            coord = input('Enter the coordinates: ').split()
-            non_str()
+            occup()
     elif coord == [1, 2]:
         if field[1][0] == ' ':
             counter += 1
@@ -69,9 +74,7 @@ def coord_():
             stage_()
             input_()
         else:
-            print('This cell is occupied! Choose another one!')
-            coord = input('Enter the coordinates: ').split()
-            non_str()
+            occup()
     elif coord == [1, 3]:
         if field[0][0] == ' ':
             counter += 1
@@ -83,9 +86,7 @@ def coord_():
             stage_()
             input_()
         else:
-            print('This cell is occupied! Choose another one!')
-            coord = input('Enter the coordinates: ').split()
-            non_str()
+            occup()
     elif coord == [2, 1]:
         if field[2][1] == ' ':
             counter += 1
@@ -97,9 +98,7 @@ def coord_():
             stage_()
             input_()
         else:
-            print('This cell is occupied! Choose another one!')
-            coord = input('Enter the coordinates: ').split()
-            non_str()
+            occup()
     elif coord == [2, 2]:
         if field[1][1] == ' ':
             counter += 1
@@ -111,9 +110,7 @@ def coord_():
             stage_()
             input_()
         else:
-            print('This cell is occupied! Choose another one!')
-            coord = input('Enter the coordinates: ').split()
-            non_str()
+            occup()
     elif coord == [2, 3]:
         if field[0][1] == ' ':
             counter += 1
@@ -125,9 +122,7 @@ def coord_():
             stage_()
             input_()
         else:
-            print('This cell is occupied! Choose another one!')
-            coord = input('Enter the coordinates: ').split()
-            non_str()
+            occup()
     elif coord == [3, 1]:
         if field[2][2] == ' ':
             counter += 1
@@ -139,9 +134,7 @@ def coord_():
             stage_()
             input_()
         else:
-            print('This cell is occupied! Choose another one!')
-            coord = input('Enter the coordinates: ').split()
-            non_str()
+            occup()
     elif coord == [3, 2]:
         if field[1][2] == ' ':
             counter += 1
@@ -153,9 +146,7 @@ def coord_():
             stage_()
             input_()
         else:
-            print('This cell is occupied! Choose another one!')
-            coord = input('Enter the coordinates: ').split()
-            non_str()
+            occup()
     elif coord == [3, 3]:
         if field[0][2] == ' ':
             counter += 1
@@ -167,9 +158,8 @@ def coord_():
             stage_()
             input_()
         else:
-            print('This cell is occupied! Choose another one!')
-            coord = input('Enter the coordinates: ').split()
-            non_str()
+            occup()
+
 
 
 def stage_():

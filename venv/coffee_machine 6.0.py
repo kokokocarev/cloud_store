@@ -90,7 +90,7 @@ The coffee machine has:
             print()
 
 
-while __name__ == "__main__" :
+while __name__ == "__main__":
     input_ = input("Write action (buy, fill, take, remaining, exit): ")
     coffee = CoffeeMachine(input_)
     if input_ == "exit":
