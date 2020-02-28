@@ -1,6 +1,6 @@
 import random
 dict_ = dict()
-name_file = 'rps/rating.txt'
+name_file = 'rating.txt'
 # content = [i.split() for i in open_file.read().split('\n')]
 # content = '\n'.join(['{0}'.format(i) for i in open_file.read().split('\n')])
 
